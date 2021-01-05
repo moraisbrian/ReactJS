@@ -1,6 +1,6 @@
 import React from 'react';
 
-const aleatorio = props => {
+export default function Aleatorio(props) {
     const { min, max } = props;
     return (
         <div>
@@ -11,4 +11,3 @@ const aleatorio = props => {
         </div>
     );
 }
-export default aleatorio;

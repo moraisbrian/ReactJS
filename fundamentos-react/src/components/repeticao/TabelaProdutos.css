@@ -1,0 +1,21 @@
+table, td, th, tr {
+    border-collapse: collapse;
+    border: black solid 1px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: cadetblue;
+    color: #fff;
+}
+
+.par {
+    background-color: darkturquoise;
+}
+
+.impar {
+    background-color: lavender;
+}

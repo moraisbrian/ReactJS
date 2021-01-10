@@ -1,0 +1,9 @@
+.Mega {
+    display: flex;
+    flex-direction: column;
+}
+
+.Mega button {
+    margin-top: 5px;
+    
+}

@@ -1,11 +1,11 @@
-import React from 'react';
-import DiretaFilho from './DiretaFilho';
+import React from 'react'
+import DiretaFilho from './DiretaFilho'
 
-export default function DiretaPai(props) {
+export default props => {
     return (
         <div>
-            <DiretaFilho nome="Marcos" idade={20} maior={true} />
-            <DiretaFilho nome="João" idade={17} maior={false} />
+            <DiretaFilho nome="Junior" idade={20} nerd={true} />
+            <DiretaFilho nome="Gabriel" idade={17} nerd={false} />
         </div>
-    );
+    )
 }

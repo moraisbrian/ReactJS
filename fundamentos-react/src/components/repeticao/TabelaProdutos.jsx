@@ -1,19 +1,24 @@
-import React from 'react';
-import produtos from '../../data/pordutos';
-import './TabelaProdutos.css';
+import './TabelaProdutos.css'
+import React from "react";
+import produtos from "../../data/produtos";
 
-export default function TabelaProdutos(props) {
-    const linhas = produtos.map((produto, i) => {
-        return (
-            <tr key={ produto.id } className={ i % 2 === 0 ? 'par' : 'impar' }>
-                <td>{ produto.id }</td>
-                <td>{ produto.nome }</td>
-                <td>R$ { produto.preco.toFixed(2) }</td>
-            </tr>
-        );
-    })
+export default (props) => {
+    
+    function getLinhas() {
+        return produtos.map((produto, i) => {
+            return (
+                <tr key={produto.id} 
+                    className={i % 2 === 0 ? 'Par' : 'Impar'}>
+                    <td>{produto.id}</td>
+                    <td>{produto.nome}</td>
+                    <td>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
+                </tr>
+            )
+        })
+    }
+
     return (
-        <div>
+        <div className="TabelaProdutos">
             <table>
                 <thead>
                     <tr>
@@ -23,9 +28,9 @@ export default function TabelaProdutos(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    { linhas }
+                    {getLinhas()}
                 </tbody>
             </table>
         </div>
     );
-}
+};

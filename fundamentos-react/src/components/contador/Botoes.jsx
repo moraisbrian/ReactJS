@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-export default function Botoes(props) {
+export default (props) => {
     return (
         <div>
             <button onClick={props.setInc}>+</button>
             <button onClick={props.setDec}>-</button>
         </div>
     );
-}
+};

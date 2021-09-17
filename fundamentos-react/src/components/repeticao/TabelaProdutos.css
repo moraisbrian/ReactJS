@@ -1,21 +1,16 @@
-table, td, th, tr {
-    border-collapse: collapse;
-    border: black solid 1px;
-}
-
-table {
+.TabelaProdutos table {
     width: 100%;
 }
 
-th {
-    background-color: cadetblue;
+.TabelaProdutos th {
+    background-color: #283cae;
     color: #fff;
 }
 
-.par {
-    background-color: darkturquoise;
+.TabelaProdutos .Par {
+    background-color: #ddd;
 }
 
-.impar {
-    background-color: lavender;
+.TabelaProdutos .Impar {
+    background-color: #ccc;
 }

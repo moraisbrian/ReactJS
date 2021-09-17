@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export default function FamiliaMembro(props) {
+export default (props) => {
     return (
-        <div>{ props.nome } <strong>{ props.sobrenome }</strong></div>
+        <div>
+            {props.nome} <strong>{props.sobrenome}</strong>
+        </div>
     );
-}
+};

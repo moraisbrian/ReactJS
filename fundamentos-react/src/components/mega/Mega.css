@@ -1,9 +1,8 @@
-.Mega {
-    display: flex;
-    flex-direction: column;
+.Mega label {
+    margin-right: 10px;
 }
 
-.Mega button {
-    margin-top: 5px;
-    
+.Mega input {
+    font-size: 1.4rem;
+    width: 50px;
 }

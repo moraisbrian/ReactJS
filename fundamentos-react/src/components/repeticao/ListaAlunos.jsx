@@ -1,19 +1,18 @@
-import React from 'react';
-import alunos from '../../data/alunos';
+import React from "react";
+import alunos from "../../data/alunos";
 
-export default function ListaAlunos(props) {
-    const lista = alunos.map((aluno) => {
+export default (props) => {
+    const alunosLI = alunos.map((aluno) => {
         return (
-            <li key={ aluno.id }>
-                { aluno.id }) { aluno.nome } - { aluno.nota }
+            <li key={aluno.id}>
+                {aluno.id}) {aluno.nome} -> {aluno.nota}
             </li>
         );
-    })
+    });
+
     return (
         <div>
-            <ul style={{ listStyle: 'none' }}>
-                { lista }
-            </ul>
+            <ul style={{ listStyle: "none" }}>{alunosLI}</ul>
         </div>
     );
-}
+};

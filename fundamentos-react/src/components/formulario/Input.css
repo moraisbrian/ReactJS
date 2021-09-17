@@ -1,8 +1,3 @@
 .Input input {
-    font-size: 1.1rem;
-}
-
-.Input .Input-Flex {
-    display: flex;
-    flex-direction: column;
+    font-size: 1.4rem;
 }

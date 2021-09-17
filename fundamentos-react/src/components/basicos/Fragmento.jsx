@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Fragmento(props) {
     return (
@@ -8,7 +8,3 @@ export default function Fragmento(props) {
         </>
     );
 }
-
-/**
- * <> </> OU <React.Fragment></React.Fragment>
- */

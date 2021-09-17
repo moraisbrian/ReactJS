@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import './Input.css';
+import "./Input.css";
+import React, { useState } from "react";
 
-export default function Input(props) {
-    const [valor, setValor] = useState('Inicial');
+export default (props) => {
+    const [valor, setValor] = useState("Inicial");
 
-    // function quandoMudar(e) {
-    //     setValor(e.target.value);
-    //     console.log(valor)
-    // }
+    function quandoMudar(e) {
+        setValor(e.target.value)
+    }
 
     return (
         <div className="Input">
-            <div className="Input-Flex">
-                <label>Edição</label>
-                <input type="text" value={valor} onChange={e => setValor(e.target.value)} />
-                <label>Leitura</label>
-                <input type="text" value={valor} readOnly />
-                <label>Não Controlado</label>
-                <input type="text" value={ undefined } />
+            <h2>{valor}</h2>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column'
+            }}>
+                <input value={valor} onChange={quandoMudar} />
+                <input value={valor} readOnly />
+                <input value={undefined} />
             </div>
         </div>
     );
-}
+};

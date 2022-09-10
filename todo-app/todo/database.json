@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "description": "Trabalhar",
+      "done": true,
+      "createdAt": "08/09/2022 13:04:15",
+      "id": 1
+    },
+    {
+      "description": "Fazer caminhada",
+      "done": true,
+      "createdAt": "08/09/2022 13:04:32",
+      "id": 3
+    },
+    {
+      "description": "Ir ao mercado",
+      "done": false,
+      "createdAt": "08/09/2022 13:46:43",
+      "id": 4
+    },
+    {
+      "description": "Xpto",
+      "done": false,
+      "createdAt": "09/09/2022 13:18:36",
+      "id": 5
+    }
+  ]
+}

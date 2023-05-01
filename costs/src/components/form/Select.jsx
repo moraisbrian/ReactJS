@@ -5,10 +5,13 @@ function Select(props) {
     return (
         <div className="form_control">
             <label htmlFor={name}>{text}:</label>
-            <select name={name} id={name}>
+            <select onChange={handleOnChange} name={name} id={name} value={value || ''}>
                 <option>
                     Selecione uma opção
                 </option>
+                {options.map(option => (
+                    <option value={option.id} key={option.id}>{option.name}</option>
+                ))}
             </select>
         </div>
     );

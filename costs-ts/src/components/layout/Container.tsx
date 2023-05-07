@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import './Container.scss';
 
 function Container(props: ContainerProps) {
@@ -6,7 +7,7 @@ function Container(props: ContainerProps) {
 
 type ContainerProps = {
     customClass?: string;
-    children: any;
+    children: JSX.Element | JSX.Element[] | ReactNode | ReactNode[];
 }
 
 export default Container;

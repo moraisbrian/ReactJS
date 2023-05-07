@@ -7,7 +7,6 @@ import ProjectCard from "../project/ProjectCard";
 import Loading from '../layout/Loading';
 import './Projects.scss';
 import { ProjectModel } from "../../models/ProjectModel";
-import If from "../layout/If";
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -61,21 +60,11 @@ function Projects() {
             {message && <Message msg={message} type="success" />}
             {projectMessage && <Message msg={projectMessage} type="success" />}
             <Container customClass="start">
-                <If test={projects.length > 0}>
-                    {projects.map((project: ProjectModel) => (
-                        <ProjectCard
-                            key={project.id}
-                            project={project}
-                            handleRemove={removeProject}
-                        />
-                    ))}
-                </If>
-                <If test={!removeLoading}>
-                    <Loading />
-                </If>
-                <If test={removeLoading && projects.length === 0}>
-                    <p>Não há projetos cadastrados!</p>
-                </If>
+                {projects.length > 0 && projects.map((project: ProjectModel) => (
+                    <ProjectCard key={project.id} project={project} handleRemove={removeProject} />
+                ))}
+                {!removeLoading && <Loading />}
+                {removeLoading && projects.length === 0 && <p>Não há projetos cadastrados!</p>}
             </Container>
         </div>
     );

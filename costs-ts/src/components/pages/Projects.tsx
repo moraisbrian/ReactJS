@@ -6,6 +6,8 @@ import LinkButton from '../layout/LinkButton';
 import ProjectCard from "../project/ProjectCard";
 import Loading from '../layout/Loading';
 import './Projects.css';
+import { ProjectModel } from "../../models/ProjectModel";
+import If from "../layout/If";
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -36,7 +38,7 @@ function Projects() {
         }, 1000);
     }, []);
 
-    function removeProject(id) {
+    function removeProject(id: number) {
         fetch(`http://localhost:5000/projects/${id}`, {
             method: 'DELETE',
             headers: {
@@ -44,7 +46,7 @@ function Projects() {
             }
         })
         .then(() => {
-            setProjects(projects.filter(project => project.id !== id));
+            setProjects(projects.filter((project: ProjectModel) => project.id !== id));
             setProjectMessage('Projeto excluído com sucesso!');
         })
         .catch(err => console.log(err));
@@ -59,20 +61,21 @@ function Projects() {
             {message && <Message msg={message} type="success" />}
             {projectMessage && <Message msg={projectMessage} type="success" />}
             <Container customClass="start">
-                {projects.length > 0 && projects.map(project => (
-                    <ProjectCard 
-                        key={project.id}
-                        id={project.id} 
-                        name={project.name} 
-                        budget={project.budget} 
-                        category={project.category.name}
-                        handleRemove={removeProject}
-                    />
-                ))}
-                {!removeLoading && <Loading />}
-                {removeLoading && projects.length === 0 && (
+                <If test={projects.length > 0}>
+                    {projects.map((project: ProjectModel) => (
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                            handleRemove={removeProject}
+                        />
+                    ))}
+                </If>
+                <If test={!removeLoading}>
+                    <Loading />
+                </If>
+                <If test={removeLoading && projects.length === 0}>
                     <p>Não há projetos cadastrados!</p>
-                )}
+                </If>
             </Container>
         </div>
     );

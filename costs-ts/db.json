@@ -12,17 +12,6 @@
       "id": 1
     },
     {
-      "name": "Novo site",
-      "budget": "8000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
       "name": "Migração SQL Server",
       "budget": "5000",
       "category": {
@@ -32,6 +21,17 @@
       "cost": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "Treinamentos",
+      "budget": "1000",
+      "category": {
+        "id": 4,
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [

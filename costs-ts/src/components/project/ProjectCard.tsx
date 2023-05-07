@@ -5,7 +5,6 @@ import { ProjectModel } from '../../models/ProjectModel';
 
 function ProjectCard(props: ProjectCardProps) {
     const { project, handleRemove } = props;
-    console.log(props);
     return (
         <div className="project_card">
             <h4>{project.name}</h4>

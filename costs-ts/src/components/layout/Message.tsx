@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Message.scss';
+import If from '../../shared/If';
 
 function Message(props: MessageProps) {
     const [visible, setVisible] = useState(false);
@@ -21,7 +22,9 @@ function Message(props: MessageProps) {
 
     return (
         <>
-            {visible && <div className={`message ${props.type}`}>{props.msg}</div>}
+            <If test={visible}>
+                <div className={`message ${props.type}`}>{props.msg}</div>
+            </If>
         </>
     );
 }

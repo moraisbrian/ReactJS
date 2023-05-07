@@ -7,6 +7,7 @@ import ProjectCard from "../project/ProjectCard";
 import Loading from '../layout/Loading';
 import './Projects.scss';
 import { ProjectModel } from "../../models/ProjectModel";
+import If from "../../shared/If";
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -57,14 +58,24 @@ function Projects() {
             <h1>Meus Projetos</h1>
             <LinkButton to="/newproject" text="Criar Projeto" />
             </div>
-            {message && <Message msg={message} type="success" />}
-            {projectMessage && <Message msg={projectMessage} type="success" />}
+            <If test={message}>
+                <Message msg={message} type="success" />
+            </If>
+            <If test={projectMessage}>
+                <Message msg={projectMessage} type="success" />
+            </If>
             <Container customClass="start">
-                {projects.length > 0 && projects.map((project: ProjectModel) => (
-                    <ProjectCard key={project.id} project={project} handleRemove={removeProject} />
-                ))}
-                {!removeLoading && <Loading />}
-                {removeLoading && projects.length === 0 && <p>Não há projetos cadastrados!</p>}
+                <If test={projects.length > 0}>
+                    {projects.map((project: ProjectModel) => (
+                        <ProjectCard key={project.id} project={project} handleRemove={removeProject} />
+                    ))}
+                </If>
+                <If test={!removeLoading}>
+                    <Loading />
+                </If>
+                <If test={removeLoading && projects.length === 0}>
+                    <p>Não há projetos cadastrados!</p>
+                </If>
             </Container>
         </div>
     );

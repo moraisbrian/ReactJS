@@ -4,6 +4,7 @@ import Loading from '../layout/Loading';
 import Container from '../layout/Container';
 import './Project.scss';
 import { ProjectModel } from '../../models/ProjectModel';
+import If, { Else } from '../../shared/If';
 
 function Project() {
     const { id } = useParams();
@@ -38,7 +39,7 @@ function Project() {
                     <button className="btn" onClick={toggleProjectForm}>
                         {!showProjectFrom ? 'Editar Projeto' : 'Fechar'}
                     </button>
-                    {!showProjectFrom ? (
+                    <If test={!showProjectFrom}>
                         <div className="project_info">
                             <p>
                                 <span>Categoria:</span> {project.category!.name}
@@ -50,11 +51,12 @@ function Project() {
                                 <span>Total de Utilizado:</span> R${project.cost}
                             </p>
                         </div>
-                    ) : (
-                        <div className="project_info">
-                            <p>form</p>
-                        </div>
-                    )}
+                        <Else>
+                            <div className="project_info">
+                                <p>form</p>
+                            </div>
+                        </Else>
+                    </If>
                 </div>
             </Container>
         </div>

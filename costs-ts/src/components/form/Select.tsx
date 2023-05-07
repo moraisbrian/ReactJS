@@ -1,4 +1,4 @@
-import './Select.css';
+import './Select.scss';
 
 function Select(props: SelectProps) {
     const { text, name, options, handleOnChange, value } = props;

@@ -1,4 +1,4 @@
-import './Container.css';
+import './Container.scss';
 
 function Container(props: ContainerProps) {
     return <div className={`container ${props.customClass}`}>{props.children}</div>

@@ -5,7 +5,7 @@ import Container from '../layout/Container';
 import LinkButton from '../layout/LinkButton';
 import ProjectCard from "../project/ProjectCard";
 import Loading from '../layout/Loading';
-import './Projects.css';
+import './Projects.scss';
 import { ProjectModel } from "../../models/ProjectModel";
 import If from "../layout/If";
 

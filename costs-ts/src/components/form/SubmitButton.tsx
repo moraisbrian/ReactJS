@@ -1,4 +1,4 @@
-import './SubmitButton.css';
+import './SubmitButton.scss';
 
 function SubmitButton(props: SubmitButtonProps) {
     const { text } = props;

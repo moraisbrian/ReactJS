@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Message.css';
+import './Message.scss';
 
 function Message(props: MessageProps) {
     const [visible, setVisible] = useState(false);

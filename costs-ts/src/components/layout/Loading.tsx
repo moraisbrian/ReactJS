@@ -1,4 +1,4 @@
-import './Loading.css';
+import './Loading.scss';
 import loading from '../../img/loading.svg';
 
 function Loading() {

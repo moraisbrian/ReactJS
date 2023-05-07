@@ -1,4 +1,4 @@
-import './Home.css';
+import './Home.scss';
 import savings from '../../img/savings.svg';
 import LinkButton from '../layout/LinkButton';
 

@@ -1,6 +1,6 @@
 import { ProjectModel } from '../../models/ProjectModel';
 import ProjectForm from '../project/ProjectForm';
-import './NewProject.css';
+import './NewProject.scss';
 import { useNavigate } from 'react-router-dom';
 
 function NewProject() {

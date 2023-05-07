@@ -1,6 +1,6 @@
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import './ProjectCard.css';
+import './ProjectCard.scss';
 import { ProjectModel } from '../../models/ProjectModel';
 
 function ProjectCard(props: ProjectCardProps) {

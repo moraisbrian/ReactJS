@@ -1,4 +1,4 @@
-import './LinkButton.css';
+import './LinkButton.scss';
 import { Link } from 'react-router-dom';
 
 function LinkButton(props: LinkButtonProps) {

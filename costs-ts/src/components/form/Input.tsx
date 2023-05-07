@@ -1,4 +1,4 @@
-import './Input.css';
+import './Input.scss';
 
 function Input(props: InputProps) {
     const { type, text, name, placeholder, handleOnChange, value } = props;

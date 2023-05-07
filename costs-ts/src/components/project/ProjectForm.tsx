@@ -2,7 +2,7 @@ import { ProjectModel } from '../../models/ProjectModel';
 import Input from '../form/Input';
 import Select from '../form/Select';
 import SubmitButton from '../form/SubmitButton';
-import './ProjectForm.css';
+import './ProjectForm.scss';
 import { useState, useEffect } from 'react';
 
 function ProjectForm(props: ProjectFormProps) {

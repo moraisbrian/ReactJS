@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Loading from '../layout/Loading';
 import Container from '../layout/Container';
-import './Project.css';
+import './Project.scss';
 import { ProjectModel } from '../../models/ProjectModel';
 
 function Project() {

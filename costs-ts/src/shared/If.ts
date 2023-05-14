@@ -1,15 +1,18 @@
 import React from "react";
 
 function If(props: IfProps) {
+    let elseChild: any;
+    let ifChild: any;
+
     const arrayChildren = React.Children.toArray(props.children);
     
-    const elseChild = arrayChildren.filter((child: any) => {
+    elseChild = arrayChildren.filter((child: any) => {
         return child.type && child.type.name === 'Else';
-    })[0] as any;
+    })[0];
 
-    const ifChild = arrayChildren.filter((child: any) => {
+    ifChild = arrayChildren.filter((child: any) => {
         return child !== elseChild;
-    }) as any;
+    });
     
     if (props.condition) {
         return ifChild;

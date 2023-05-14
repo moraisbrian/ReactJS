@@ -22,7 +22,7 @@ function Message(props: MessageProps) {
 
     return (
         <>
-            <If test={visible}>
+            <If condition={visible}>
                 <div className={`message ${props.type}`}>{props.msg}</div>
             </If>
         </>

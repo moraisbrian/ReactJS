@@ -58,22 +58,22 @@ function Projects() {
             <h1>Meus Projetos</h1>
             <LinkButton to="/newproject" text="Criar Projeto" />
             </div>
-            <If test={message}>
+            <If condition={message}>
                 <Message msg={message} type="success" />
             </If>
-            <If test={projectMessage}>
+            <If condition={projectMessage}>
                 <Message msg={projectMessage} type="success" />
             </If>
             <Container customClass="start">
-                <If test={projects.length > 0}>
+                <If condition={projects.length > 0}>
                     {projects.map((project: ProjectModel) => (
                         <ProjectCard key={project.id} project={project} handleRemove={removeProject} />
                     ))}
                 </If>
-                <If test={!removeLoading}>
+                <If condition={!removeLoading}>
                     <Loading />
                 </If>
-                <If test={removeLoading && projects.length === 0}>
+                <If condition={removeLoading && projects.length === 0}>
                     <p>Não há projetos cadastrados!</p>
                 </If>
             </Container>

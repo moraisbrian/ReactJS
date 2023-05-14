@@ -39,7 +39,7 @@ function Project() {
                     <button className="btn" onClick={toggleProjectForm}>
                         {!showProjectFrom ? 'Editar Projeto' : 'Fechar'}
                     </button>
-                    <If test={!showProjectFrom}>
+                    <If condition={!showProjectFrom}>
                         <div className="project_info">
                             <p>
                                 <span>Categoria:</span> {project.category!.name}

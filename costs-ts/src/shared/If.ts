@@ -14,7 +14,7 @@ function If(props: IfProps) {
         return child !== elseChild;
     });
     
-    if (props.test) {
+    if (props.condition) {
         return ifChild;
     } else if (elseChild) {
         return elseChild;
@@ -24,7 +24,7 @@ function If(props: IfProps) {
 }
 
 type IfProps = {
-    test: any;
+    condition: any;
     children: any[] | any;
 }
 

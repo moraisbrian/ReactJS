@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Message from "../layout/Message";
+import Message, { MessageTypes } from "../layout/Message";
 import Container from '../layout/Container';
 import LinkButton from '../layout/LinkButton';
 import ProjectCard from "../project/ProjectCard";
@@ -59,10 +59,10 @@ function Projects() {
             <LinkButton to="/newproject" text="Criar Projeto" />
             </div>
             <If condition={message}>
-                <Message msg={message} type="success" />
+                <Message message={message} type={MessageTypes.success} />
             </If>
             <If condition={projectMessage}>
-                <Message msg={projectMessage} type="success" />
+                <Message message={projectMessage} type={MessageTypes.success} />
             </If>
             <Container customClass="start">
                 <If condition={projects.length > 0}>

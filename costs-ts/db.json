@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Migração SQL Server",
-      "budget": "2000",
+      "budget": "6000",
       "category": {
         "id": 1,
         "name": "Infra"

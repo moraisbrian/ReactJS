@@ -6,7 +6,7 @@ function Message(props: MessageProps) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        if (!props.msg) {
+        if (!props.message) {
             setVisible(false);
             return;
         }
@@ -18,20 +18,25 @@ function Message(props: MessageProps) {
         }, 3000);
 
         return () => clearTimeout(timer);
-    }, [props.msg]);
+    }, [props.message]);
 
     return (
         <>
             <If condition={visible}>
-                <div className={`message ${props.type}`}>{props.msg}</div>
+                <div className={`message ${props.type}`}>{props.message}</div>
             </If>
         </>
     );
 }
 
+export enum MessageTypes {
+    error = 'error',
+    success = 'success'
+}
+
 type MessageProps = {
     type: string;
-    msg: string;
+    message: string;
 }
 
 export default Message;

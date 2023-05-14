@@ -47,14 +47,14 @@ function Project() {
             },
             body: JSON.stringify(project)
         })
-            .then((response: any) => response.json())
-            .then((data: ProjectModel) => {
-                setProject(data);
-                setShowProjectFrom(false);
-                setMessage('Projeto Atualizado!');
-                setType(MessageType.success);
-            })
-            .catch((err: any) => console.log(err));
+        .then((response: any) => response.json())
+        .then((data: ProjectModel) => {
+            setProject(data);
+            setShowProjectFrom(false);
+            setMessage('Projeto Atualizado!');
+            setType(MessageType.success);
+        })
+        .catch((err: any) => console.log(err));
     }
 
     return (
